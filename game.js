@@ -85,13 +85,16 @@ let questions = [
 ];
 
 const question = document.querySelector("#question");
-const score = document.querySelector("#score");
+const scoreText = document.querySelector("#score");
 const answer = document.querySelectorAll(".choice-text");
 const progressBarFull = document.querySelector("#progressBarFull");
 const progressText = document.querySelector("#progressText");
 
 let questionCounter = 1;
 const maxQuestion = 6;
+const SCORE_POINTS = 100;
+let score = 0;
+
 let answer1;
 const getQuestion = () => {
   let random = Math.floor(Math.random() * questions.length);
@@ -108,20 +111,45 @@ const getQuestion = () => {
 
   questions.splice(random, 1);
 };
-const nextQuestion = (number, id) => {
+getQuestion();
+const nextQuestion = (number) => {
   if (questions.length === 0) {
-    return window.location.assign("end.html");
+    localStorage.setItem("mostRecentScore", score);
+
+    setTimeout(() => {
+      return window.location.assign("end.html");
+    }, 1000);
   }
 
   if (answer1 == number) {
-    document.getElementById(answer1).style.backgroundColor = "green";
-  }
+    document.getElementById(number).style.backgroundColor = "green";
+    scoreText.innerText = score += 100;
+    // document.getElementById("true").play();
+    setTimeout(() => {
+      getQuestion();
+      document.getElementById(number).style.backgroundColor = "teal";
+    }, 1000);
+  } else {
+    document.getElementById(number).style.backgroundColor = "red";
 
-  getQuestion();
+    setTimeout(() => {
+      getQuestion();
+      document.getElementById(number).style.backgroundColor = "teal";
+    }, 1000);
+  }
 };
-nextQuestion();
+
+var x = function playAudio() {
+  x.play();
+};
 
 incrementScore = (num) => {
   score + num;
   scoreText.innerText = score;
 };
+const finalScore = document.querySelector("#finalScore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+
+finalScore.innerText = mostRecentScore;
+
+nextQuestion();

@@ -123,6 +123,11 @@ h1 {
 .hidden {
   display: none;
 }
+
+.icon {
+  background-image: white;
+}
+
 @media screen and (max-width: 768px) {
   .choice-container {
     min-width: 20px;

@@ -70,10 +70,6 @@ h1 {
   transform: scale(1.03);
 }
 
-.colorhighscore {
-  box-shadow: 0 0.2rem 1rem 0 teal;
-  background-color: goldenrod;
-}
 .btn[disabled]:hover {
   cursor: pointer;
   box-shadow: none;
@@ -91,37 +87,7 @@ h1 {
   align-items: center;
   max-width: 30rem;
 }
-
-/* input {
-  margin-bottom: 1rem;
-  width: 20rem;
-  padding: 1.5rem;
-  font-size: 1.8rem;
-  border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+#bachome {
+  box-shadow: 0 0.2rem 1rem 0 teal;
+  background-color: goldenrod;
 }
-
-input::placeholder {
-  color: #aaa;
-}
-#username {
-  margin-bottom: 3rem;
-  width: 100%;
-  outline: none;
-}
-
-#end-text {
-  font-size: 2.4rem;
-  color: #fff;
-  text-align: center;
-}
-
-#saveScoreBtn {
-  border: none;
-}
-
-.fa-home {
-  margin-left: 1rem;
-  font-size: 2rem;
-  color: rgb(20, 26, 26);
-} */
