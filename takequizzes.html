@@ -20,8 +20,6 @@
         <li>
           <a href=""><span class="Color">take quizzes </span></a>
         </li>
-
-        <li><a href="CONTACT.html">Contact</a></li>
       </ul>
     </div>
     <div class="containers">
@@ -29,25 +27,25 @@
     </div>
 
     <div class="row">
-      <div class="column">
-        <div class="card">
-          <a href="readyquiz.html">
-            <img src="images/javascript.png" alt="javascript" />
-            <h2>Javascript</h2></a
+      <div class="column" onclick="changeKey('javascript')">
+        <div class="card" id="javascript">
+          <a href="readyquiz.html" id="javascript">
+            <img src="images/javascript.png" alt="javascript" id="javascript" />
+            <h2 id="javascript">Javascript</h2></a
           >
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <a href="readyquiz.html">
-            <img src="images/html.png" alt="html" />
-            <h2>HTML</h2>
+      <div class="column" onclick="changeKey('html')">
+        <div class="card" id="html">
+          <a href="readyquiz.html" id="html">
+            <img src="images/html.png" alt="html" id="html" />
+            <h2 id="html">HTML</h2>
           </a>
         </div>
       </div>
 
-      <div class="column">
+      <div class="column" onclick="changeKey('css')">
         <div class="card">
           <a href="readyquiz.html">
             <img src="images/css.png" alt="css" />
@@ -56,7 +54,7 @@
         </div>
       </div>
 
-      <div class="column">
+      <div class="column" onclick="changeKey('react')">
         <div class="card">
           <a href="readyquiz.html">
             <img src="images/react.png" alt="react" />
@@ -67,16 +65,16 @@
     </div>
 
     <div class="row">
-      <div class="column">
+      <div class="column" onclick="changeKey('csharp')">
         <div class="card">
           <a href="readyquiz.html">
-            <img src="images/flutter.png" alt="flutter" />
-            <h2>Flutter</h2></a
+            <img src="images/csharp.png" alt="csharp" />
+            <h2>C#</h2></a
           >
         </div>
       </div>
 
-      <div class="column">
+      <div class="column" onclick="changeKey('nodejs')">
         <div class="card">
           <a href="readyquiz.html">
             <img src="images/nodejs.png" alt="nodejs" />
@@ -85,7 +83,7 @@
         </div>
       </div>
 
-      <div class="column">
+      <div class="column" onclick="changeKey('angularjs')">
         <div class="card">
           <a href="readyquiz.html">
             <img src="images/angularjs.png" alt="angularjs" />
@@ -94,7 +92,7 @@
         </div>
       </div>
 
-      <div class="column">
+      <div class="column" onclick="changeKey('php')">
         <div class="card">
           <a href="readyquiz.html">
             <img src="images/php.png" alt="php" />
@@ -102,6 +100,10 @@
           </a>
         </div>
       </div>
+      <div class="footer">
+        <p>Copyright &#169 2021 All Rights Reserved By Quiz<span class="spanColor">Mind</span></p>
     </div>
+    </div>
+    <script src="quizjavascript.js"></script>
   </body>
 </html>
