@@ -5,7 +5,6 @@ const progressBarFull = document.querySelector("#progressBarFull");
 const progressText = document.querySelector("#progressText");
 const countdownEl = document.getElementById("countdown");
 
-const SCORE_POINTS = 100;
 const maxQuestion = 6;
 
 let questionCounter = 1;
