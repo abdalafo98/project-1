@@ -11,7 +11,7 @@ let questionCounter = 1;
 let score = 0;
 let answer1;
 let time = 60;
-let x;
+let clearTimer;
 
 const changeKey = (e) => {
   console.log(e);
@@ -19,18 +19,19 @@ const changeKey = (e) => {
 };
 
 const getQuestion = (e) => {
-  clearInterval(x);
+  clearInterval(clearTimer);
   time = 60;
-  x = setInterval(() => {
+  clearTimer = setInterval(() => {
     countdownEl.innerText = `${time}`;
     time--;
     if (time === 0) {
       time = 60;
 
-      clearInterval(x);
+      clearInterval(clearTimer);
       getQuestion(localStorage.getItem("quizType"));
     }
   }, 1000);
+
   if (questions[e].length === 0) {
     localStorage.setItem("mostRecentScore", score);
     setTimeout(() => {
