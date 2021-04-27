@@ -24,7 +24,7 @@ const getQuestion = (e) => {
   clearTimer = setInterval(() => {
     countdownEl.innerText = `${time}`;
     time--;
-    if (time === 0) {
+    if (time === -1) {
       time = 60;
 
       clearInterval(clearTimer);
